@@ -1,0 +1,43 @@
+#map {
+    width: 35%;
+    height: 500px;
+    margin-left: 32.5%;
+}
+
+@media screen and (max-width: 900px) {
+    #map {
+        width: 80%;
+        height: 500px;
+        margin-left: 10%;
+    }
+}
+
+.marker {
+    background-image: url('img/Habodror_semel.png');
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.mapboxgl-popup {
+    max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.scroll {
+    scroll-margin-top: 66px;
+}
+
+.fa-facebook-square {
+    color: #3b5998
+}
+
+.fa-instagram-square {
+color: #C13584
+}

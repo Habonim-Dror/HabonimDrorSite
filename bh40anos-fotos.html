@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171735381-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-171735381-1');
+  </script>
+  <!-- GTAG end -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="Habonim, Dror">
+  <meta name="description" content="Página comemorativa aos 40 anos do Habonim Dror Belo Horizonte">
+  <meta name="author" content="Ian Guelman">
+  <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+  <title>Fotos</title>
+
+  <!-- Fonts Awesome -->
+  <script src="https://kit.fontawesome.com/7cbe446b47.js" crossorigin="anonymous"></script>
+
+  <!-- JQuery -->
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+  </script>
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-storage.js"></script>
+
+  <link rel="stylesheet" href="./bh40anos.css">
+  <script src="./bh40anos-fotos.js"></script>
+</head>
+
+<body class="bg-grey-100">
+
+  <header class="capa_imagem position-relative">
+    <nav class="navbar navbar-expand-md navbar-light">
+      <div class="container-fluid">
+        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+          aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <div class="container-fluid">
+            <ul class="navbar-nav w-100 justify-content-around">
+              <li class="nav-item">
+                <a class="nav-link lead text-white fw-bold" href="./bh40anos.html">INÍCIO</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link lead text-white fw-bolder" href="./bh40anos-historia.html">HISTÓRIA</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link lead text-red fw-bold" href="./bh40anos-fotos.html">FOTOS</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+    <h1 class="position-absolute bottom-0 start-0 display-1 fw-bold text-white mb-5 ms-1 ms-lg-5 titulo">GALERIA
+      <br> DE FOTOS</h1>
+  </header>
+
+  <main>
+    <div id="fotos" class="p-2 mt-3 text-center">
+
+      <div class="text-center text-body ">
+        <div class="spinner-border ms-auto align-middle" role="status" aria-hidden="true"></div>
+        <strong class="align-middle fs-2">Carregando...</strong>
+      </div>
+
+    </div>
+
+    <div class="modal" id="fotoModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-red">
+          <!-- <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div> -->
+          <div class="modal-body">
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner" id="foto-carousel">
+
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Proximo</span>
+              </button>
+            </div>
+          </div>
+          <!-- <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer bg-red mt-5 position-relative">
+    <a href="./bh40anos-fotos-adm.html" class="link-light m-1 position-absolute bottom-0 start-0"">Acesso Restrito</a>
+    <div class=" w-100 p-2 m-0 d-flex justify-content-end">
+      <a class="m-3" href="https://www.instagram.com/drorsnifbh/" target="_blank">
+        <i class="fab fa-instagram fa-3x text-white"></i>
+      </a>
+      <a class="m-3" href="https://www.facebook.com/drorsnifbh" target="_blank">
+        <i class="fab fa-facebook fa-3x text-white"></i>
+      </a>
+
+      </div>
+
+</body>
+
+</html>

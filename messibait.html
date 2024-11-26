@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171735381-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-171735381-1');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Habonim, Dror">
+    <meta name="description" content="Site do movimento juvenil Habonim Dror Brasil">
+    <meta name="author" content="Ian Guelman">
+    <title>Messibait</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Bootstrap Css -->
+    <link rel="stylesheet" href="main.css">
+
+    <!-- JQuery -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+
+    <!-- JQuery Mask -->
+    <script src="node_modules/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
+
+    <!-- Popper.js -->
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+
+    <!-- Bootstrap Js -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+
+    <script src="messibait.js"></script>
+    <link rel="stylesheet" href="messibait.css">
+</head>
+
+<body class="bg-light">
+    <div class="container-fluid m-1">
+
+        <div class="row">
+            <div id="carouselArtistas"
+                class="carousel slide col-md-5 col-12 border rounded border-danger p-1 bg-vermelho h-75 mt-5"
+                data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselArtistas" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselArtistas" data-slide-to="1"></li>
+                    <li data-target="#carouselArtistas" data-slide-to="2"></li>
+                    <li data-target="#carouselArtistas" data-slide-to="3"></li>
+                    <li data-target="#carouselArtistas" data-slide-to="4"></li>
+                    <li data-target="#carouselArtistas" data-slide-to="5"></li>
+                    <li data-target="#carouselArtistas" data-slide-to="6"></li>
+                    <li data-target="#carouselArtistas" data-slide-to="7"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="messibait_images/capa.jpeg" class="d-block w-100 rounded" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="messibait_images/george.jpeg" class="d-block w-100 rounded" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="messibait_images//dani.jpeg" class="d-block w-100 rounded" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="messibait_images/jazz.jpeg" class="d-block w-100 rounded" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="messibait_images/fortuna.jpeg" class="d-block w-100 rounded" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="messibait_images/ori.jpeg" class="d-block w-100 rounded" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="messibait_images/caju.jpeg" class="d-block w-100 rounded" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="messibait_images/monique.jpeg" class="d-block w-100 rounded" alt="...">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselArtistas" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon bg-secondary" aria-hidden="true"></span>
+                    <span class="sr-only">Próximo</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselArtistas" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon bg-secondary" aria-hidden="true"></span>
+                    <span class="sr-only">Anterior</span>
+                </a>
+            </div>
+            <div class="col-md-7">
+                <div class="p-3 mb-0">
+                    <div class="w-100 text-center"><img src="/messibait_images/titulofundotransparente.png"
+                            class="image-fluid col-md-4 col-12"></div>
+                    <p class="text-justify">Sejam bem-vindes à <b>Messibá de 75 anos do Habonim Dror Brasil!</b></p>
+                    <p class="text-justify">Estamos felizes em dividir essa alegria com vocês em um momento tão
+                        complicado da nossa história. Mais uma vez, o Habonim Dror está aqui para superar obstáculos e
+                        criar pontes entre Judaísmo, Sionismo e a Comunidade Judaica brasileira!</p>
+                    <p class="text-justify">Aqui embaixo vocês poderão assistir a nossa <b>Live que começa sábado, dia
+                            03 de outubro, às 18 horas.</b></p>
+                    <p class="text-justify">Nesta página vocês também encontrarão a Revista produzida especialmente para
+                        essa comemoração e um espaço para deixar mensagens de parabéns para o Dror!</p>
+                    <p class="text-justify">Por último, <b>estamos recolhendo doações para a nossa Tnuá</b> que, em meio
+                        a tanta crise, continua trabalhando em todas as 10 comunidades brasileiras, educando jovens e
+                        enviando chaverim para o Shnat Hachshará! <b>O seu apoio é fundamental!</b></p>
+                </div>
+
+                <div class=" text-center mt-0">
+                    <h3 class="texto vermelho">Assista no YouTube</h3>
+                    <div class="embed-responsive embed-responsive-16by9 col-md-6 d-block m-auto">
+                        <iframe src="https://www.youtube.com/embed/pjer8PKYkUs" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <br>
+        <br>
+
+        <div class="row">
+            <div class="border rounded border-danger col-md-3 p-2 text-center d-block m-auto bg-light">
+                <button class="btn btn-light" data-toggle="modal" data-target="#modalDoacao">
+                    <img class="w-100" src="/messibait_images/doar.png">
+                </button>
+                <span class="texto vermelho">(Clique na imagem)</span>
+            </div>
+
+            <div class="border rounded border-danger col-md-3 p-2 text-center d-block m-auto bg-light">
+                <button class="btn btn-light" data-toggle="modal" data-target="#modalRevista">
+                    <img class="w-100" src="/messibait_images/capas-13.png">
+                </button>
+                <br>
+                <span class="texto vermelho">(Clique na imagem)</span>
+            </div> 
+
+            <div class="border rounded border-danger col-md-3 p-2 text-center d-block m-auto bg-light">
+                <button class="btn btn-light" data-toggle="modal" data-target="#modalMensagem">
+                    <img class="w-75" src="/messibait_images/recado.png">
+                </button>
+                <span class="texto vermelho">(Clique na imagem)</span>
+            </div>
+        </div>
+
+
+        <br>
+        <br>
+
+        <div id="mensagens"></div>
+
+    </div>
+
+    <div class="modal fade" id="modalDoacao" tabindex="-1" role="dialog" aria-labelledby="modalDoacaoTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalDoacaoTitle">Escolha a forma da doação</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body row text-center">
+                    <div class="col-4">
+                        <h6>PayPal ou Cartão de Credito</h6>
+                        <form action="https://www.paypal.com/cgi-bin/webscr" target="_blank" method="post"
+                            target="_top">
+                            <input type="hidden" name="cmd" value="_donations" />
+                            <input type="hidden" name="business" value="cchdrj@hdbr.org.br" />
+                            <input type="hidden" name="item_name" value="Ajudar o Habonim Dror!" />
+                            <input type="hidden" name="currency_code" value="BRL" />
+                            <input type="image" src="https://www.paypalobjects.com/pt_BR/BR/i/btn/btn_donateCC_LG.gif"
+                                name="submit" title="PayPal - The safer, easier way to pay online!"
+                                alt="Faça doações com o botão do PayPal" />
+                            <img src="https://www.paypal.com/pt_BR/i/scr/pixel.gif" width="1" height="1" />
+                        </form>
+                    </div>
+                    <div class="col-4">
+                        <h6>PicPay</h6>
+                        <a href="https://app.picpay.com/user/casa.cultura.habonim"><img
+                                src="/messibait_images/PicPay.png" class="w-100" alt=""></a>
+                    </div>
+
+                    <div class="col-4">
+                        <h6>Transferencia</h6>
+                        <button type="button" class="btn btn-large btn-secondary text-white" data-toggle="modal"
+                            data-target="#modalTransferencia">
+                            Informações
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalTransferencia" tabindex="-1" role="dialog"
+        aria-labelledby="modalTransferenciaTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTransferenciaTitle">Dados Transferência</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <p><b>Nome:</b> Casa de Cultura Habonim Dror</p>
+                    <p><b>CNPJ:</b> 40.248.882/0001-23</p>
+                    <p><b>Banco:</b> Banco do Brasil</p>
+                    <p><b>Agência:</b> 3118-6</p>
+                    <p><b>Conta corrente:</b> 27942-0</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalRevista" tabindex="-1" role="dialog" aria-labelledby="modalRevistaTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalRevistaTitle">Revista Messibait</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <p class="text-justify">A Revista da Messibait está disponível de graça para todes!
+                    Pedimos, para quem puder, que nos ajude com o custo da Revista Messibait com a contribuição de 15 reais!
+                    Muito obrigado!</p>
+                    <button class="btn btn-secondary text-white d-block m-auto " onclick="$('#modalRevista').modal('hide')" data-toggle="modal" data-target="#modalDoacao">Posso
+                        contribuir</button>
+                        <br>
+                    <button class="btn btn-secondary text-white d-block m-auto"> 
+                        <a href="HD75spreads.pdf" target="_blank" class="text-white">Download da Revista Messibait</a>
+                    </button>
+                    <br>
+                    <button class="btn btn-secondary text-white d-block m-auto ">
+                        <a href="https://issuu.com/alex-grinn.com/docs/hd75pages" target="_blank" class="text-white">Leia a Revista Messibait online</a>
+                    </button>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalMensagem" tabindex="-1" role="dialog" aria-labelledby="modalMensagemTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalMensagemTitle">Escrever Mensagem</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="formMensagem">
+                        <div class="form-group">
+                            <label for="nome">Nome</label>
+                            <input type="text" name="nome" id="nome" class="form-control" placeholder="Nome completo"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensagem">Mensagem</label>
+                            <textarea name="mensagem" id="mensagem" cols="30" rows="10" class="form-control"
+                                placeholder="Escreva sua mensagem" required></textarea>
+                        </div>
+                    </form>
+                    <small class="form-text text-muted">Sua mensagem aparecerá pública para todos após validação de seu
+                        conteúdo.</small>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-success" onclick="enviar()">Publicar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<br>
+<br>
+<br>
+
+<footer class="footer">
+
+</footer>
+
+</html>

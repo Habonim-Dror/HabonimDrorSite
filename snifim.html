@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171735381-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-171735381-1');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+  <title>Snifim</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@200;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/7cbe446b47.js" crossorigin="anonymous"></script>
+
+  <!-- mapbox -->
+  <script src='https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.css' rel='stylesheet' />
+
+  <!-- Bootstrap Css -->
+  <link rel="stylesheet" href="main.css">
+
+  <!-- JQuery -->
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+
+  <!-- Popper.js -->
+  <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+
+  <!-- Bootstrap Js -->
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <script src="snifim.js"></script>
+  <link rel="stylesheet" href="snifim.css">
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark static-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="img/favicon.png" alt="Semel" width="40" height="40">
+          <h5 class="d-inline align-middle">&nbsp Habonim Dror Brasil</h5>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+          aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Sobre nós
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="historia.html">Nossa história</a>
+                <a class="dropdown-item" href="pilares.html">Pilares HDBR</a>
+                <a class="dropdown-item" href="chaver.html">Trajetória Tnuati</a>
+                <a class="dropdown-item" href="documentos.html">Documentos</a>
+                <a class="dropdown-item" href="glossario.html">Glossário</a>
+              </div>
+            </li>
+
+            <li class="nav-item active">
+              <a class="nav-link" href="snifim.html">Comunidade pelo Brasil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="eventos.html">Eventos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="mundo.html">HD pelo mundo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cultural.html">Cultural</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contato.html">Contato</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  <div class="container-fluid" style="background-color: #451a1a">
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container mb-3">
+      <div class="row p-3">
+
+        <div class="col-sm-6 text-center">
+          <h1 class="titulo" style="color: #edabab">Comunidade pelo Brasil</h1>
+          <br>
+          <p class="desc text-light">O Habonim Dror é a maior Tnuá do país, com presença em 10 estados, provocando uma
+            imensa troca cultural entre os chaverim em machanot e eventos Artzi. </p>
+        </div>
+
+        <div class="col">
+          <img src="img/mascot.svg" class="img-fluid" width="900" height="900">
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- API MapBox -->
+    <div>
+      <p class="desc text-center text-light">Clique no Snif</p>
+      <div id='map' class="mb-3 border border-dark"></div>
+
+    </div>
+
+    <br>
+
+  </div>
+
+
+  </div>
+
+
+
+
+
+  <ul id='snifim' class="container mb-5 list-group list-group-flush">
+    <li class="list-group-item">
+      <h1 id='BeloHorizonte' class="scroll">Belo Horizonte - Snif Yitzhak Rabin</h1>
+      <a href="https://www.facebook.com/drorsnifbh" target="_blank"><i class="fab fa-facebook-square fa-3x"></i></a>
+      <a href="https://www.instagram.com/drorsnifbh" target="_blank"><i class="fab fa-instagram-square fa-3x"></i></a>
+
+      <p class="desc">
+
+        &nbsp;&nbsp;&nbsp;&nbsp;Na década de 70, por grande influência de Rachel Cohen (Z'L), uma grande líder
+        comunitária, a comunidade judaica passou a buscar maior proximidade com Israel, e um sionismo mais intenso e
+        prático.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Nos anos 80, a comunidade judaica mineira passava por fortes mudanças: o Gachelet, snif
+        mineiro da Chazit Hanoach, sofria uma grande crise, e já não tinha o apoio da Tnuá Artzit. As Na’amat Pioneiras,
+        sob liderança da Rachel Cohen (Z'L), já mantinham fortes conexões com o partido trabalhista israelense Mapai, e
+        apoiavam a criação de uma Tnuá que tivesse uma forte conexão com Israel também.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Na mesma época, os movimentos Ichud Habonim e Dror se organizavam para se juntar em um
+        movimento só. Em 1981, com o Habonim Dror já formado, um chaver do snif Rio, Amnon Solomon, viu a oportunidade
+        de expandir a Tnuá para Belo Horizonte, e passou a visitar a comunidade, dando atividades como leakot ou
+        encontros com chaverim cariocas. O Habonim Dror, apoiado por algumas lideranças comunitárias, passou a ser
+        cotado para abrir um snif em BH, substituindo o Gachelet. Assim, realizou-se uma reunião com jovens e seus pais
+        na AIB (centro comunitário) para votar qual Tnuá se manteria na comunidade. O Habonim Dror propôs a ida de Amnon
+        como sheliach para BH, dando mais suporte que o Gachelet teria, e, assim, votou-se para a criação do Snif Belo
+        Horizonte do Habonim Dror.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Em 1981 criou-se o Habonim Dror, e com muito trabalho e identificação tnuatit de seus
+        chaverim, o Dror conseguiu se estruturar. Desde o início a Federação sempre apoiou muito o desenvolvimento da
+        Tnuá. <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Amnon usou como estratégia inicial convidar jovens que frequentavam a UIBH (centro
+        comunitário frequentado por parte da comunidade judaica), e quebrar a divisão comunitária que, mesmo
+        enfraquecida, ainda existia. <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Kiba Lerman (Z’L) foi o primeiro maskir em BH, e já em 1982 dois chaverim realizaram o
+        programa Shnat Hachshará do Habonim Dror por Belo Horizonte. <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;A partir de 1982, foram enviados varios Shlichim para que o trabalho fosse orientado com
+        o propósito de garantir a permanência do Dror em Belo Horizonte. A Tnuá vinha se estruturando, passando por
+        dificuldades mas criando momentos incríveis para seus chaverim e para a comunidade mineira. <br>
+        &nbsp;&nbsp;&nbsp;&nbsp; De 1982 a 1986, houveram kvutzot Shnat e a participação de bogrim no movimento, porém a
+        partir de 1986, a falta de bogrim se tornou um problema, tendo em vista que os bogrim mais antigos estavam se
+        desligando do Snif, e não estava ocorrendo a renovação natural, fazendo com que o Dror se tornasse instável,
+        passando por tempos difíceis.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Em 1986 a Tnuá já não tinha grande perspectiva de futuro, tendo grande escassez de
+        bogrim e kvutzot mais velhas que fossem ativas o suficiente para se tornarem referência para os mais novos.
+        Mesmo assim, com muito empenho, alguns poucos bogrim (Rony Cohen, Marcos Zagury, entre outros), já com uma certa
+        carga da bagrut, se mantiveram ativos, se dedicando exclusivamente na educação das kvutzot de shichavot bogrot,
+        contando e apostando todas as fichas em duas kvutzot muitos fortes na época, as kvutzot de mordim e bonim ! <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Ambas Kvutzot eram extremamente comprometidas e atuantes, e eles enchergaram nestas
+        Kvutzot as chance de poderem manter o movimento vivo. A aposta e dedicação valeram a pena, e a partir de 1990,
+        estas duas kvutzot se tornaram kvutzot Shnat e iniciaram um ciclo virtuoso e permanente de envio de jovens do
+        Snif para o Shnat.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Foi criado a partir deste ano entre os chaverim, o costume de se fazer o programa e
+        voltar pra Tnuá. <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;A partir disso o Habonim Dror se estabilizou e se fortaleceu em BH, tendo uma grande
+        história que contou com bogrim, madrichim, chanichim e shlichim que, juntos, fizeram e marcaram a história da
+        Tnuá em Belo Horizonte.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Atualmente, realizamos sábado de atividades e machanot durante as férias.
+      </p>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <img src="img/drorBH1.jpeg" class="img-fluid">
+          <br>
+          <br>
+
+        </div>
+
+        <div class="col-sm-6">
+          <img src="img/drorBH2.jpeg" class="img-fluid">
+        </div>
+      </div>
+      <p class="desc">apoio</p>
+
+      <br>
+      <img src="img/mg.jpg" class="img-fluid" width="250">
+
+
+
+    </li>
+    <li class="list-group-item bg-light">
+      <h1 id='Campinas' class="scroll">Campinas - Laor</h1>
+
+      <a href="https://www.facebook.com/laorcampinas" target="_blank"><i class="fab fa-facebook-square fa-3x"></i></a>
+      <a href="https://www.instagram.com/laor.campinas" target="_blank"><i
+          class="fab fa-instagram-square fa-3x"></i></a>
+      <p class="desc">
+        &nbsp;&nbsp;&nbsp;&nbsp;O Movimento Laor foi criado em 1990, pela falta de um espaço para jovens na comunidade
+        judaica do interior. Com chaverim de Campinas, Ribeirão Preto, Santo André, Santos, entre outros, o Laor começou
+        suas atividades na SIBBJC - Sociedade Israelita Brasileira Beth Jacob de Campinas, onde permanece até hoje. No
+        início dos anos 2000, houve uma grande diminuição nas comunidades judaicas do interior, e com a falência da
+        DEPEC (órgão judaico relacionado às pequenas comunidades), perdeu-se o contato entre a tnuá e as outras cidades
+        do interior. Com a queda no número de chaverim, surgiu uma parceria entre o Laor e o Habonim Dror SP, que
+        começaram a fazer machanot locais juntos. Alguns madrichim do Laor se interessaram pelo shnat e posteriormente
+        pelas machanot centrais, aproximando-se também do Habonim Dror Artzi. Em 2019, o Laor tornou-se oficialmente um
+        snif do Habonim Dror.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Atualmente temos uma situação crítica com relação a número de chanichim, mas conseguimos
+        manter nossas atividades e uma boa relação com a comunidade. Por termos muitas shichavot sem chanichim, já
+        passamos por alguns períodos sem atividades, o que sempre nos prejudica, mas com algum esforço por parte dos
+        madrichim conseguimos retomar a confiança dos chanichim e dos pais. Temos atividades com Shichavot Tzeiror duas
+        vezes por mês e machanot locais junto com o snif SP.</p>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <img src="img/laor.jpg" class="img-fluid">
+          <br>
+          <br>
+
+        </div>
+
+        <div class="col-sm-6">
+          <img src="img/laor2.jpg" class="img-fluid">
+        </div>
+      </div>
+      <p class="desc">apoio</p>
+
+      <br>
+      <img src="img/cmp.jpg" class="img-fluid" width="200">
+
+    </li>
+    <li class="list-group-item">
+      <h1 id='Curitiba' class="scroll">Curitiba</h1>
+      <a href="https://www.facebook.com/invasao.vermelha.9" target="_blank"><i
+          class="fab fa-facebook-square fa-3x"></i></a>
+      <a href="https://www.instagram.com/drorctba" target="_blank"><i class="fab fa-instagram-square fa-3x"></i></a>
+      <p class="desc">
+        &nbsp;&nbsp;&nbsp;&nbsp;O Habonim Dror Curitiba foi criado em 1945 por um grupo de aproximadamente 10 pessoas da
+        comunidade, logo depois do primeiro snif, em Porto Alegre. No começo, as atividades aconteciam no porão da
+        família Schulman. Depois, o snif passou a ter localização fixa na Travessa Langue e depois na Rua Coronel
+        Dulcidio. Anos depois foi construído o Centro Israelita do Paraná, onde o snif passou a funcionar, e a casa da
+        Coronel Dulcidio entrou em reforma.
+        Após um tempo, voltamos para a Rua Coronel Dulcidio, onde as atividades ocorreram nos anos 80 e 90. No ano 2000
+        passamos as atividades pro CIP, porém logo e seguida, em 2001, o Habonim Dror Curitiba passou a funcionar na
+        chácara da família Zugman (snif campestre). Com o passar do tempo alteramos novamente o local de atividades para
+        um estacionamento emprestado pela família Axelrud na Candido de Abreu (conhecido como snif estacionamento).
+        Finalmente em 2002 ocorreu a inauguração do atual snif anexo ao CIP, onde as atividades acontecem até então.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Hoje em dia o Snif Curitiba tem um potencial de aproximadamente 100 chaverim. Realizamos
+        atividades para Shichavot Tzeirot todos os sábados, peulot para shichavot bogrot praticamente todas as semanas e
+        ainda atividades entre bogrim ou programadas pela Maskirut/Hanagá para toda Shichavot Bogrot!<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;As vaadot que funcionam atualmente são rádio (um local específico da casa), kolbo (na
+        nossa linda cozinha, recentemente reformada), kishutim, pirsum, bait, iton, machsan e ezra! Além disso, existe
+        uma vaadat que faz um delicioso almoço todos os sábados, a vaadat Carmel que prepara a dança do festival e uma
+        nova vaadat - a sifria, também um lugar físico na casa - que propõe dicas de materiais educativos, filmes e
+        outros conteúdos. <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Todo sábado e machanot nas férias, realizamos um mifkad no começo com contagem, hinos de
+        Israel e do Dror e recados, e um final para encerrar a atividade e dar os recados finais!</p>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <img src="img/cur1.jpg" class="img-fluid">
+          <br>
+          <br>
+        </div>
+
+        <div class="col-sm-6">
+          <img src="img/cur2.png" class="img-fluid">
+        </div>
+      </div>
+      <p class="desc">apoio</p>
+
+      <br>
+      <img src="img/cur.jpg" class="img-fluid" width="200">
+
+
+    </li>
+    <li class="list-group-item bg-light">
+      <h1 id='SãoPaulo' class="scroll">São Paulo</h1>
+
+      <a href="https://www.facebook.com/habonimdrorsp" target="_blank"><i class="fab fa-facebook-square fa-3x"></i></a>
+      <a href="https://www.instagram.com/habonimdrorsp" target="_blank"><i
+          class="fab fa-instagram-square fa-3x"></i></a>
+      <p class="desc">
+        &nbsp;&nbsp;&nbsp;&nbsp;No inicio dos anos 80 aconteceu a junção, do Dror Hakibutz Hameuchad e do Ichud Habonim
+        surgindo assim o Habonim Dror. Em São Paulo, ambos tinham snif no bairro do Bom Retiro, mas o Habonim Dror ficou
+        no snif do Ichud. A maioria da comunidade judaica na ocasião vivia nesse bairro.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Com o passar dos anos os judeus começaram a residir em outros bairros principalmente em
+        Higienópolis. Isso refletiu no número de chaverim na Tnuá, que caiu. Assim, a diretoria da Associação Cultural
+        Moshe Sharret e os bogrim da época, do ano 2008/2009, entendeu que o melhor era mudar de bairro. Portanto,
+        começou a busca por um novo lugar e a venda do snif do Bom Retiro.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Isso se concretizou em 2009, quando a casa da Rua Bahia foi comprada e inaugurada com
+        uma grande festa. Nosso snif permanece nesse local até hoje. <br>
+        &nbsp;&nbsp;&nbsp;&nbsp; Hoje em dia, nós do Habonim Dror realizamos peulot semanalmente de sábados, eventuais
+        Shabatot e Sedarim, além de 2 machanot ao longo do ano junto com o snif Campinas. Em São Paulo existem outras 9
+        tnuot, que participam em conjunto do Conselho Juvenil Judaico onde realizamos vários eventos para a nós e para
+        comunidade judaica como um todo.
+      </p>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <img src="img/sp1.jpg" class="img-fluid">
+          <br>
+          <br>
+        </div>
+
+        <div class="col-sm-6">
+          <img src="img/sp2.jpg" class="img-fluid">
+        </div>
+      </div>
+      <p class="desc">apoio</p>
+
+      <br>
+      <img src="img/ms.jpg" class="img-fluid" width="200">
+
+
+    </li>
+    <li class="list-group-item">
+      <h1 id='Fortaleza' class="scroll">Fortaleza</h1>
+      <a href="https://www.facebook.com/habonim.dror.18" target="_blank"><i
+          class="fab fa-facebook-square fa-3x"></i></a>
+      <a href="https://www.instagram.com/habonimdrorfortaleza" target="_blank"><i
+          class="fab fa-instagram-square fa-3x"></i></a>
+
+      <p class="desc">
+
+        &nbsp;&nbsp;&nbsp;&nbsp;O Snif Fortaleza foi criado após visita e contato de Daniel Torban, de Recife, que
+        juntamente a alguns chaverim fez o primeiro sábado de atividade, em 25 de Maio de 2013. Após a criação, o snif
+        foi levado por 4 chaverim na shichvá de Mordim: Deborah, Felipe, Ivan e Noah. Por parte da juventude judaica
+        cearense daquele período, havia um desejo de ter uma identidade própria e expressar seu judaísmo de forma
+        independente em um espaço de autogestão, e o Habonim Dror era o espaço para isso. <br>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;A Machané Central (que reúne todos os snifim do Brasil) de Julho, do mesmo ano, recebeu
+        pela primeira vez os chaverim de Fortaleza, e assim tiveram o primeiro contato com o Habonim Dror Artzi. A
+        partir desse momento, a influência do nosso recém Snif só começou. Em Janeiro de 2015 houve uma machané conjunta
+        entre Recife e Fortaleza, na qual foi a primeira vez que chanichim de Fortaleza participaram de uma machané
+        local. Em seguida, no Shnat Hachshará de 2016, houve presença de chaverim do Snif Fortaleza. Em 2018, também foi
+        a primeira vez que houve um chaver de Fortaleza participando da Hanagá Artzi. E assim, desde então ocorrem
+        diversos Seminários de capacitação.<br>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;Hoje em dia o Snif é liderado por 4 chaverim da shichvá de Mordim: Alon, Levi, Nicolas e
+        Rebeca, que estão cuidando do Snif e fazendo as atividades aos sábados.</p>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <img src="img/fort1.jpg" class="img-fluid">
+          <br>
+          <br>
+        </div>
+
+        <div class="col-sm-6">
+          <img src="img/fort2.jpg" class="img-fluid">
+        </div>
+      </div>
+      <p class="desc">apoio</p>
+
+      <br>
+      <img src="img/sic.jpg" class="img-fluid" width="200">
+
+    </li>
+
+    <li class="list-group-item bg-light">
+      <h1 id='Manaus' class="scroll">Manaus</h1>
+
+      <a href="https://www.facebook.com/habonimdror.snifmanaus" target="_blank"><i
+          class="fab fa-facebook-square fa-3x"></i></a>
+      <a href="https://www.instagram.com/hdsnifmanaus" target="_blank"><i class="fab fa-instagram-square fa-3x"></i></a>
+      <p class="desc">
+        &nbsp;&nbsp;&nbsp;&nbsp;Em Manaus havia encontros locais dos jovens, entretanto, não existia nenhum movimento.
+        Em 2009, com a vinda do Rafael Stern para cá tudo mudou, pois ele se tornou peil e plantou a semente do Habonim
+        Dror em Manaus.<br>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;Desde então encontramos vários percalços, mas persistimos e estamos na nossa melhor
+        fase!! Nós contamos com o auxílio do Comitê Israelita do Amazonas, o qual tem como sede a sinagoga Beit Yacoov
+        Rabi Meyr.<br>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;Sempre fomos um snif pequeno e dedicado, nunca desistimos e pouco a pouco conseguimos
+        nos organizar. Desde o início do ano passado conquistamos um grande número de chanichim e tivemos machanot
+        incríveis! Além de termos recebido um apoio muito grande dos pais, do próprio CIAM e da direção da Hebraica.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Recentemente, devido a uma enorme demanda, incluímos os chalutzim nos sábados.<br>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;Ficamos muito felizes em fazer parte da comunidade judaica da nossa cidade e contribuir
+        com a educação de pequenos judeus, além de contribuirmos na socialização de nossas crianças. Buscamos sempre
+        trazer os ideais comunitários para a vida de cada chanich, bem como mostrá-los a importância de sempre serem
+        críticos e formadores de opiniões. <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Estamos cada vez mais colhendo frutos e nossa Shchavot Bogrot está muito unida e
+        proativa.</p>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <img src="img/man1.jpg" class="img-fluid">
+          <br>
+          <br>
+        </div>
+
+        <div class="col-sm-6">
+          <img src="img/man2.jpg" class="img-fluid">
+        </div>
+      </div>
+      <p class="desc">apoio</p>
+
+      <br>
+      <img src="img/ciam.jpg" class="img-fluid" width="200">
+
+    </li>
+
+    <li class="list-group-item">
+      <h1 id='PortoAlegre' class="scroll">Porto Alegre</h1>
+      <a href="https://www.facebook.com/hdpoa" target="_blank"><i class="fab fa-facebook-square fa-3x"></i></a>
+      <a href="https://www.instagram.com/hdpoa" target="_blank"><i class="fab fa-instagram-square fa-3x"></i></a>
+
+      <p class="desc">
+        &nbsp;&nbsp;&nbsp;&nbsp;A partir do contato com o movimento Dror na Argentina, jovens (em sua maioria
+        imigrantes, ou filhos de imigrantes) trouxeram os ideais da tnuá para Porto Alegre. Com grande vontade de
+        mudança social e em busca de conter a assimilação, fundaram, então, no dia 05 de Outubro de 1945 o primeiro snif
+        do Brasil, que foi batizado de Snif Borochov. <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Sem demora, enraizado no Brasil, o Dror começa a formar suas bases ideológicas e
+        educacionais, atraindo cerca de 300 jovens em busca do conhecimento do modelo kibutziano, do movimento sionista,
+        do socialismo, dos princípios da revolução chalutziana e da construção kvutzatí. Em 1948, após a Independência
+        de Israel, esses conteúdos, aliados com a possibilidade de liberdade para jovens, proporcionou um grande aumento
+        no número de chaverim. Logo em 1950, Porto Alegre enviou o seu primeiro grupo para fazer alía, que contava com
+        grandes líderes, o que desestabilizou o movimento, e acarretou na diminuição de participantes.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Entretanto, o Dror ainda se demonstrava um movimento forte e de grande influência. Após
+        o seminário da Lapa, tornou-se mais clara a ideia da aliá kibutziana para a construção de Israel como um modelo
+        socialista para o mundo. Muitos chaverim largaram suas faculdades, se profissionalizaram e fizeram aliá e
+        auxiliaram na construção de Israel, atitude que somos muitos orgulhosos hoje em dia.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Com o percorrer dos anos, o Dror, em Porto Alegre, foi se demonstrando uma referência
+        juvenil, sionista e judaica para a comunidade que, com o passar do tempo, foi se tornando mais adaptada ao
+        Brasil, tendo em vista as suas origens estrangeiras. <br>
+        &nbsp;&nbsp;&nbsp;&nbspHoje, temos um casa própria que já passou por diversas gerações. Nos consideramos uma
+        grande família, nos preocupamos uns com os outros. Amamos o que fazemos e nos dedicamos para sempre realizarmos
+        o melhor que pudermos. Em 2016, o nosso Snif pegou fogo, o que nos abalou muito. Foram quase dois anos fora de
+        casa, mas permanecemos realizando nossas atividades em outro local, sempre buscando a continuidade da nossa
+        educação. Em 2018, a nossa casa reabriu. Desde então, buscamos a maior convivência dentro dela junto com todos
+        os chaverim, para criar um ambiente de aprendizagem vivenciada. <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Cada vez mais, tentamos trazer a comunidade para perto de nós, jovens, realizando
+        eventos e difundindo nossa ideias. Podemos dizer que o Habonim Dror Porto Alegre honra nosso passado e que
+        procura um futuro condizente com as nossas ideologias e com o nosso mundo atual.
+      </p>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <img src="img/poa1.jpg" class="img-fluid">
+          <br>
+          <br>
+        </div>
+
+        <div class="col-sm-6">
+          <img src="img/poa2.jpg" class="img-fluid">
+        </div>
+      </div>
+      <br>
+      <p class="desc">apoio</p>
+      <br>
+      <img src="img/ber.jpg" class="img-fluid" width="200">
+
+
+
+    </li>
+
+    <li class="list-group-item bg-light">
+      <h1 id='Recife' class="scroll">Recife</h1>
+      <a href="https://www.facebook.com/habonimdror.snifrecife" target="_blank"><i
+          class="fab fa-facebook-square fa-3x"></i></a>
+      <a href="https://www.instagram.com/hdsnifrecife" target="_blank"><i class="fab fa-instagram-square fa-3x"></i></a>
+      <p class="desc"> &nbsp;&nbsp;&nbsp;&nbsp; O Habonim Dror é a única tnuá em Recife, renascendo no dia 15 de
+        novembro de 1968, graças ao empenho de
+        diversos chaverim/ot. Podemos citar como exemplo de chaver, Max Lutherman, que, durante a ditadura, percebeu a
+        importância dos ideias, dos valores e, principalmente, da educação, e juntamente com outros chaverim/ot decidiu,
+        mesmo com todo o caos, reabrir a Tnuá.
+        <br>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;O Habonim Dror snif Recife atua de forma significativa na vida comunitária, participando
+        dos diversos marcos,
+        sendo o grupo que une a juventude judaica do estado de Pernambuco. 
+        <br>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;Desempenha uma importante função no que diz respeito à marcos juvenis judaicos. Buscando
+        realizar seminários,
+        shabatot e diversos eventos para chaverim/ot da kheilá. Além disso, semestralmente ocorrem machanot locais, bem
+        como participamos das machanot a nível Artzi, que unem todos os snifim do Brasil com idade de Schichavot Bogrot.
+        Vale ressaltar, que nos últimos anos vem se criando um costume de fazer machanot Nordeste em conjunto com os
+        snifim Salvador e Fortaleza. 
+        <br>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;O Habonim Dror snif Recife é o maior representante da tnuá fora das regiões sul e
+        Sudeste, tendo uma importante
+        função comunitária, buscando diminuir o processo de assimilação da juventude judaica, sem contar que é uma das
+        possibilidades de marcos judaicos para jovens judeus dos estados vizinhos.
+        <br>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;Podemos declarar com muito orgulho que tivemos a primeira Mazkirá mulher do Brasil,
+        Roseane Tchalitsky, sendo
+        uma grande inspiração para gerações de chaverot, a ocuparem seu lugar de direito, nos diversos cargos que a tnuá
+        propõe.
+        <br>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;Atualmente participam do snif Recife cerca de 60 chaverim/ot na faixa etária de 8 a 24
+        anos, dos quais é costume
+        participar do Shnat Hachshará, além de sempre manter representar do snif na Hanagá Artzi.</p>
+
+
+      <div class="row">
+        <div class="col-sm-6">
+          <img src="img/rec1.jpg" class="img-fluid">
+          <br>
+          <br>
+        </div>
+
+        <div class="col-sm-6">
+          <img src="img/rec2.jpg" class="img-fluid">
+        </div>
+
+
+      </div>
+      <p class="desc">apoio</p>
+
+      <br>
+      <img src="img/pe.jpg" class="img-fluid" width="200">
+    </li>
+    <li class="list-group-item">
+      <h1 id='RiodeJaneiro' class="scroll">Rio de Janeiro</h1>
+      <a href="https://www.facebook.com/habonimrio/" target="_blank"><i class="fab fa-facebook-square fa-3x"></i></a>
+      <a href="https://www.instagram.com/haborio" target="_blank"><i class="fab fa-instagram-square fa-3x"></i></a>
+
+      <p class="desc">
+        &nbsp;&nbsp;&nbsp;&nbsp; Os primeiros passos do Habonim Dror Snif Rio de Janeiro ocorrem logo após a fundação do
+        snif Porto Alegre, em 1945. Jovens que realizavam um grupo de estudos na biblioteca Bialik foram responsáveis
+        pela formação do querido snif carioca. No entanto, foi a partir do acampamento de verão, em março de 1948, que o
+        movimento se consolidou na capital fluminense.<br>
+
+        &nbsp;&nbsp;&nbsp;&nbsp; Os grupos de estudos aconteciam tanto na biblioteca Bialik quanto no Ginásio Hebreu
+        Brasileiro. Em determinado momento foi decidido que o Hashomer Hatzair seria formado a partir desses grupos.
+        Contudo, aqueles que se identificavam o sionismo socialista democrático, por já haver a possibilidade de
+        organização do Dror -ligado ao Partido MAPAI- no Rio, recusaram- se a fazer parte do Hashomer.<br>
+
+        &nbsp;&nbsp;&nbsp;&nbsp; Ao contrário dos paulistas, que preferiram fortalecer a tnuá antes de estabelecer o
+        kibutz-hachshará, os cariocas se juntaram aos gaúchos na ideia de “Hachshará Agora” e partiram para suas
+        hachsharot e, posteriormente, aliot. O principal objetivo era realizar o sionismo na prática e evitar o
+        enfraquecimento do movimento sionista.<br>
+
+        &nbsp;&nbsp;&nbsp;&nbsp; Em 1981, aconteceu uma grande messibá no Hotel Nacional para comemorar a junção do
+        Ichud Habonim com o Dror. Assim, a sede do Dror, em Copacabana, serviu para a realização das atividades das
+        shichavot bogrot, enquanto que na sede do Ichud Habonim, em Botafogo, era onde se davam as atividades das
+        shichavot tzeirot. Após alguns anos, a sede de Copacabana foi alugada e a de Botafogo passou a ser o único snif
+        do Habonim Dror Rio de Janeiro.<br>
+
+        &nbsp;&nbsp;&nbsp;&nbsp; No ano de 2013, a Tnuá, em parceria com a Casa de Cultura, organizou o Museu do Yitzhak
+        Rabin em nosso ken. Para isso, madrichim foram capacitados para serem guias de grupos diversos. É importante
+        ressaltar que um dos objetivos do projeto é levar a história para fora da comunidade judaica, a fim de
+        democratizar o conhecimento. Em seguida, o projeto foi expandido, possibilitando a realização do museu em outros
+        snifim do Habonim Dror Brasil. <br>
+
+        &nbsp;&nbsp;&nbsp;&nbsp; Nos últimos anos, realizamos nossos encontros com as shichavot tzeirot todo sábado de
+        14h às 18h. Já as shichavot bogrot se reúnem logo após para nossas peulot e peguishot. Fazemos duas machanot
+        locais, destinadas as shichavot tzeirot, ao longo do ano, ao fim de cada semestre e depois nos ingressamos as
+        machanot centrais, também no fim de cada semestre, mas essa destinada as shichavot bogrot. <br>
+
+        &nbsp;&nbsp;&nbsp;&nbsp; Uma de nossas mudanças para o ano de 2020 foi a estrutura da nossa Hanaga. Uma vez
+        aprovado o projeto no seminário, extinguiu-se o cargo de Rosh Havodá, que teve suas funções transferidas para o
+        Maskir. Além disso, o cargo de Rosh Chinuch foi dividido em Rosh Chinuch Tzeirot e Rosh Chinuch Bogrot. Isso
+        ocorreu a fim de possibilitar um processo pedagógico mais atento para nossos objetivos em cada faixa etária da
+        vida tnuati. Portanto, a hanaga carioca é formada pelo Mazkir, Rosh Chinuch Tzeirot, Rosh Chinuch Bogrot, Rosh
+        Chutz e Guizbar.
+      </p>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <img src="img/rio1.jpg" class="img-fluid">
+          <br>
+          <br>
+        </div>
+
+        <div class="col-sm-6">
+          <img src="img/rio2.jpg" class="img-fluid">
+        </div>
+      </div>
+
+      <br>
+      <p class="desc">apoio</p>
+
+      <br>
+      <img src="img/cultura.jpg" class="img-fluid" width="200">
+
+
+    </li>
+    <li class="list-group-item bg-light">
+      <h1 id='Salvador' class="scroll">Salvador</h1>
+      <a href="https://www.facebook.com/drorzinho.salvador" target="_blank"><i
+          class="fab fa-facebook-square fa-3x"></i></a>
+      <a href="https://www.instagram.com/drorzinhoba" target="_blank"><i class="fab fa-instagram-square fa-3x"></i></a>
+      <p class="desc">
+        &nbsp;&nbsp;&nbsp;&nbsp; O Habonim Dror Snif Bahia tem sua origem no final da década de 60, início da década de
+        70 como Ichud Habonim Snif Bahia. Um grupo de amigos da comunidade judaica de Salvador começou nessa época a
+        organizar reuniões. Elas tinham temas que frequentemente envolviam judaísmo e principalmente sionismo. Alguns
+        dos participantes dessas reuniões já tinham participado de machanot do Ichud Habonim de outros estados e
+        começaram a se corresponder, pouco tempo depois foi fundado o snif bahia.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp; O snif, que atualmente é a única tnuá noar da Bahia, já funcionou na antiga Hebraica de
+        salvador, em alguns colégios e na sede antiga da SIB (Sociedade Israelita da Bahia). Atualmente as atividades
+        são realizadas na atual sede da SIB.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Geralmente o Drorzinho Salvador, como o snif é conhecido nas redes sociais, tem duas
+        machanot por ano, uma e junho e outra em dezembro ou janeiro e de vez em quando há a machané nordeste, que une
+        madrichim e chanichim dos snifim Bahia, Fortaleza e Recife. Os madrichim do snif bahia participam também das
+        edições dos seminários de educação Norte e Nordeste.</p>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <img src="img/salv1.jpg" class="img-fluid">
+          <br>
+          <br>
+        </div>
+
+        <div class="col-sm-6">
+          <img src="img/salv2.jpg" class="img-fluid">
+        </div>
+      </div>
+      <p class="desc">apoio</p>
+
+      <br>
+      <img src="img/sib.jpg" class="img-fluid" width="200">
+
+    </li>
+  </ul>
+
+
+</body>
+<footer class="footer">
+  <div class="rodape">
+    <div class="container-fluid p-2" style="background-color: #b07d84;">
+
+      <div class="row pl-2">
+        <br>
+        <br>
+
+        <div class="col-sm-3" align="center">
+
+          <img src="img/footer.svg" width="300">
+          <br>
+          <br>
+
+        </div>
+
+        <div class="col-sm-9" align="center">
+
+
+          <img src="img/apoio.svg" class="img-fluid" width="600">
+
+
+        </div>
+
+
+      </div>
+
+      <div align="center">
+        <small style="vertical-align: bottom;">&copy; Copyright <script>
+            document.write(new Date().getFullYear())
+          </script> | Habonim Dror Brasil</small>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+  </div>
+
+
+
+</footer>
+
+</html>
