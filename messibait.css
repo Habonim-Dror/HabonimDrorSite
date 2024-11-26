@@ -1,0 +1,11 @@
+p, .texto {
+    font-family: Tahoma !important;
+}
+
+.vermelho {
+    color: #AB1811;
+}
+.bg-vermelho {
+    background-color: #AB1811;
+}
+

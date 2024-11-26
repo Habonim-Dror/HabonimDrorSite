@@ -1,0 +1,110 @@
+.bg-grey-100 {
+  background: #f9f9f9;
+}
+
+.bg-grey-300 {
+  background: #e5e5e5;
+}
+
+.bg-red {
+  background: #bc160f;
+}
+
+.text-red {
+  color: #bc160f !important;
+}
+
+.capa_imagem {
+  background-image: url("./bh40anos_images/CAPA_Provisoria.jpg");
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (min-width: 992px) {
+  .capa_imagem {
+    height: 550px;
+  }
+}
+
+.video-thumb {
+  cursor: pointer;
+  opacity: 1;
+  transition: 0.2s;
+}
+
+.video-thumb:hover+.thumb-title {
+  opacity: 1;
+  visibility: visible;
+}
+
+.video-thumb:hover {
+  opacity: 0.7;
+}
+
+.translate-Y-50 {
+  transform: translateY(50%);
+}
+
+.translate-Y-neg-50 {
+  transform: translateY(-50%);
+}
+
+.titulo {
+  font-size: 3rem;
+}
+
+.foto-album {
+  cursor: pointer;
+  height: 100px;
+  width: 100px;
+}
+
+.card-album {
+  width: 150px;
+}
+
+.foto-card-album {
+  height: 150px;
+}
+
+
+@media (min-width: 992px) {
+  .translate-Y-50-lg {
+    transform: translateY(50%);
+  }
+
+  .translate-Y-neg-50-lg {
+    transform: translateY(-50%);
+  }
+
+  .translate-Y-neg-20-lg {
+    transform: translateY(-20%);
+  }
+
+  .titulo {
+    font-size: 8rem;
+  }
+
+  .foto-album {
+    cursor: pointer;
+    height: 200px;
+    width: 200px;
+  }
+
+  .thumb-title {
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s;
+  }
+
+  .card-album {
+    width: 200px;
+  }
+
+  .foto-card-album {
+    height: 200px;
+  }
+
+}

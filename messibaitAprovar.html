@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Habonim, Dror">
+    <meta name="description" content="Site do movimento juvenil Habonim Dror Brasil">
+    <meta name="author" content="Ian Guelman">
+    <title>Aprovar mensagens</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+
+    <!-- Bootstrap Css -->
+    <link rel="stylesheet" href="main.css">
+
+    <!-- JQuery -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+
+    <!-- JQuery Mask -->
+    <script src="node_modules/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
+
+    <!-- Popper.js -->
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+
+    <!-- Bootstrap Js -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-auth.js"></script>
+
+    <script src="messibaitAprovar.js"></script>
+
+
+</head>
+
+<body class="p-3">
+    <form id="login_form" class="col-lg-3 col-md-6 col-10 m-3 p-2 border rounded bg-light d-block m-auto">
+        <h2 class="text-secondary">Login</h2>
+        <div class="form-group">
+            <label class="text-secondary" for="login_email">Email</label>
+            <input id="login_email" class="form-control" type="email" name="login_email" autocomplete="email" required>
+        </div>
+        <div class="form-group">
+            <label class="text-secondary" for="login_senha">Senha</label>
+            <input id="login_senha" class="form-control" type="password" name="login_senha"
+                autocomplete="current-password" required>
+        </div>
+        <div class="form-group text-center">
+            <input class="btn btn-primary btn-block" type="submit" value="Entrar">
+        </div>
+    </form>
+</body>
+
+</html>

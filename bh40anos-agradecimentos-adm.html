@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171735381-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-171735381-1');
+  </script>
+  <!-- GTAG end -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="Habonim, Dror">
+  <meta name="description" content="Página comemorativa aos 40 anos do Habonim Dror Belo Horizonte">
+  <meta name="author" content="Ian Guelman">
+  <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+  <title>Agradecimentos ADM</title>
+
+  <!-- Fonts Awesome -->
+  <script src="https://kit.fontawesome.com/7cbe446b47.js" crossorigin="anonymous"></script>
+
+  <!-- JQuery -->
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+  </script>
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+
+  <link rel="stylesheet" href="./bh40anos.css">
+  <script src="./bh40anos-agradecimentos-adm.js"></script>
+  <script src="./bh40anos-authenticator.js"></script>
+</head>
+
+<body class="bg-grey-100">
+
+  <header>
+    <nav class="navbar navbar-expand-md navbar-light">
+      <div class="container-fluid">
+        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+          aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav w-100 justify-content-around">
+            <li class="nav-item">
+              <a class="nav-link lead text-body fw-bold" href="./bh40anos.html">INÍCIO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link lead text-body fw-bold" href="./bh40anos-fotos-adm.html">FOTOS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link lead text-red fw-bold" href="./bh40anos-agradecimentos-adm.html">AGRADECIMENTOS</a>
+            </li>
+            <li class="nav-item">
+              <button type="button" class="btn btn-outline-danger btn-sm" onclick="logout()"><span
+                  class="fs-5">Sair</span> <i class="fas fa-sign-out-alt"></i></button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="row justify-content-center w-100 m-0">
+      <div class="col-12 col-lg-6">
+        <label for="fotoPublicar" class="form-label text-center w-100 h5">Adicionar / Remover agradecimento</label>
+        <div class="input-group mb-1">
+          <div class="input-group-prepend">
+            <span class="input-group-text bg-secondary text-white">Categoria</span>
+          </div>
+          <input type="text" class="form-control" id="agradecimento-categoria">
+        </div>
+        <div class="input-group mb-1">
+          <div class="input-group-prepend">
+            <span class="input-group-text bg-secondary text-white">Nome</span>
+          </div>
+          <input type="text" class="form-control" id="agradecimento-nome">
+        </div>
+        <div class="btn-group w-100 my-2">
+          <button class="btn btn-outline-success mx-1" onClick="adicionarAgradecimento()">Adicionar</button>
+          <button class="btn btn-outline-danger mx-1" onClick="removerAgradecimento()">Remover</button>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div id="agradecimentos" class="container-fluid pt-5">
+
+        <div class="text-center text-body ">
+          <div class="spinner-border ms-auto align-middle" role="status" aria-hidden="true"></div>
+          <strong class="align-middle fs-2">Carregando...</strong>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalConfirmarAgradecimento" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Remover agradecimento</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body">
+            <p>Tem certeza que deseja remover este agradecimento?</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-danger" id="modalConfirmarBtnAgradecimento">Remover</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalConfirmarCategoria" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Remover categoria</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body">
+            <p>Tem certeza que deseja remover esta categoria e todos seus agradecimento?</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-danger" id="modalConfirmarBtnCategoria">Remover</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.9450948,
+          -19.9227318
+        ]
+      },
+      "properties": {
+        "title": "Belo Horizonte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -46.6333824,
+          -23.5506507
+        ]
+      },
+      "properties": {
+        "title": "São Paulo"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -47.06083,
+          -22.90556
+        ]
+      },
+      "properties": {
+        "title": "Campinas"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.2093727,
+          -22.9110137
+        ]
+      },
+      "properties": {
+        "title": "Rio de Janeiro"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -49.2712724,
+          -25.4295963
+        ]
+      },
+      "properties": {
+        "title": "Curitiba"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -51.2303767,
+          -30.0324999
+        ]
+      },
+      "properties": {
+        "title": "Porto Alegre"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -34.8781517,
+          -8.0641931
+        ]
+      },
+      "properties": {
+        "title": "Recife"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.4812772,
+          -12.9822499
+        ]
+      },
+      "properties": {
+        "title": "Salvador"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.5217989,
+          -3.7304512
+        ]
+      },
+      "properties": {
+        "title": "Fortaleza"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -59.9825041,
+          -3.1316333
+        ]
+      },
+      "properties": {
+        "title": "Manaus"
+      }
+    }
+  ]
+}

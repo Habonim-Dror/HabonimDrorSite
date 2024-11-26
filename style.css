@@ -1,0 +1,141 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+.container_ {
+    background-color: #c7042e;
+    padding-top: 7%;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-bottom: 3%;
+
+}
+
+.distanciamento-nav {
+    text-align: center;
+}
+
+
+.estande {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.facebook-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+}
+
+.facebook-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.fa-facebook-square {
+    color: #3b5998
+}
+
+.fa-instagram-square {
+    color: #C13584
+}
+
+.fa-whatsapp-square {
+    color: #25d366
+}
+
+#insta {
+    float: right;
+}
+
+.titulo {
+    font-family: 'Caveat', cursive;
+    font-size: 3rem;
+}
+
+.titulo2 {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 5rem;
+}
+
+.rodape {
+    border-top-style: solid;
+    border-top-width: 10px;
+    border-top-color: red;
+}
+
+.pilares {
+    font-family: 'Permanent Marker', cursive;
+}
+
+.contato {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 4rem;
+}
+
+.contato1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2rem;
+}
+
+.simbo {
+    font-family: 'Acme', sans-serif;
+    color: #302613
+}
+
+.titulo3 {
+    font-family: 'Oswald', sans-serif;
+}
+
+
+.corpo {
+    border-left-style: solid;
+    border-left-width: 40px;
+    border-left-color: #294999;
+}
+
+.pilares2 {
+    font-family: 'Sriracha', cursive;
+    font-size: 40px;
+}
+
+.my-custom-scrollbar {
+    position: relative;
+    height: 485px;
+    overflow: auto;
+}
+
+.table-wrapper-scroll-y {
+    display: block;
+}
+
+.snifim {
+    font-family: 'MuseoModerno', cursive;
+}
+
+.desc {
+    font-family: 'Raleway', sans-serif;
+}
+
+.cal {
+    border-style: solid;
+    border-width: 30px;
+    border-color: #57272d;
+}
+
+@media (max-width: 768px){
+    .fc-toolbar.fc-header-toolbar {
+        display: block;
+        text-align: center;
+    }
+}
